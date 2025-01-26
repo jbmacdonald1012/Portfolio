@@ -4,18 +4,18 @@ const router = Router();
 const ExpensesController = require('../controllers/ExpensesController');
 
 //GET all expenses
-ExpensesController.GetAllExpenses;
+router.get('/', ExpensesController.GetAllExpenses);
 
 //GET expense by id
-ExpensesController.GetExpenseById;
+router.get('/:id', ExpensesController.GetExpenseById);
 
 //CREATE expense
-ExpensesController.CreateExpense;
+router.post('/', ExpensesController.CreateExpense);
 
 //Update expense
-ExpensesController.UpdateExpense;
+router.put('/:id', ExpensesController.UpdateExpense);
 
 //DELETE expense
-ExpensesController.DeleteExpense;
+router.delete('/:id', ExpensesController.DeleteExpense);
 
 module.exports = router;
