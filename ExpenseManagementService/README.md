@@ -31,8 +31,6 @@ To ensure there's data in the database connect pgAdmin to the Docker instance an
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/current/index.html)
 - [Node.js Documentation](https://nodejs.org/docs/latest/api/)
 - [Express.js Documentation](https://expressjs.com/)
