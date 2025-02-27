@@ -7,7 +7,7 @@ This project is the frontend User Interface built using React.js and TailwindCSS
 A list of pages and their content can be found below.
 
 
-[Software Demo Video](https://youtu.be/53ZQQPAr8RY)
+[Expense Manager Service Demo](https://youtu.be/53ZQQPAr8RY)
 
 # Web Pages
 
