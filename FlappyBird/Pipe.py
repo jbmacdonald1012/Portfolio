@@ -1,4 +1,6 @@
 ﻿import pygame
+pygame.mixer.init()
+import Assets
 import Variables
 
 
@@ -26,3 +28,4 @@ class Pipe(pygame.sprite.Sprite):
             if self.enter and self.exit and not self.passed:
                 self.passed = True
                 Variables.score += 1
+                Assets.score_point_sound.play()

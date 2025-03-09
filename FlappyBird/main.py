@@ -1,5 +1,6 @@
 ﻿import pygame
 pygame.init()
+pygame.mixer.init()
 import random
 import Assets
 import Variables
@@ -24,6 +25,7 @@ def quit_game():
             exit()
 
 def main():
+    collision_sound_played = False
 
     #Bird Instantiation
     bird_group = pygame.sprite.Group()
@@ -75,12 +77,20 @@ def main():
 
         if bird_collides_with_pipes or bird_collides_with_ground:
             bird.alive = False
+            
             if bird_collides_with_ground:
                 window.blit(Assets.game_over, (Variables.win_width // 2 - Assets.game_over.get_width() // 2,
                                                Variables.win_height // 2 - Assets.game_over.get_height() // 2.))
-                if user_input[pygame.K_r]:
-                    Variables.score = 0
-                    break
+
+            if bird_collides_with_pipes and not collision_sound_played:
+                Assets.collision_sound.play()
+                collision_sound_played = True
+                window.blit(Assets.game_over, (Variables.win_width // 2 - Assets.game_over.get_width() // 2,
+                                               Variables.win_height // 2 - Assets.game_over.get_height() // 2.))
+            if user_input[pygame.K_r]:
+                Variables.score = 0
+                collision_sound_played = False
+                break
 
 
         #Add Pipes to screen
@@ -100,6 +110,7 @@ def main():
 def menu():
     while game_stopped:
         quit_game()
+        collision_sound_played = True
         window.fill((0,0,0))
         window.blit(Assets.background_image, (0, 0))
         window.blit(Assets.ground_image, Ground(0,520))

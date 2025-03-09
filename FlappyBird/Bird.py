@@ -28,6 +28,7 @@ class Bird(pygame.sprite.Sprite):
         self.image = pygame.transform.rotate(self.image, self.vel * 7)
 
         if user_input[pygame.K_SPACE] and not self.flap and self.rect.y > 0 and self.alive:
+            Assets.wing_flap_sound.play()
             self.flap = True
             self.vel = -7
 
