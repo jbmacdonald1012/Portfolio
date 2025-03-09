@@ -12,6 +12,7 @@ from Pipe import Pipe
 clock = pygame.time.Clock()
 
 window = pygame.display.set_mode((Variables.win_width, Variables.win_height))
+pygame.display.set_caption("Flappy Bird")
 font = Variables.font
 score = Variables.score
 game_stopped = Variables.game_stopped
