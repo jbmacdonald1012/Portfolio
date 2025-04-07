@@ -1,50 +1,32 @@
-# Welcome to your Expo app 👋
+# Overview
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a Mobile phone app that is avaialable in either iOS or Android, as it's written in React Native in TypeScript, using the Expo framework. 
 
-## Get started
+The application itself is similar to an AirBnB or Vrbo property rental app. The user is able to log into the application using Google OAuth, and from there can browse the properties, search for different options and view specific details about the properties as well. 
 
-1. Install dependencies
+[Software Demo Video](https://youtu.be/tVuXm6HRBrA)
 
-   ```bash
-   npm install
-   ```
+# Development Environment
 
-2. Start the app
+I used JetBrains Webstorm as the IDE for this project. It has many built in features that are helpful with JavaScript, TypeScript, and React. 
 
-   ```bash
-    npx expo start
-   ```
+This project also uses the Expo Framework which is excellent for developing with React Native. With Expo, you're able to download an app on your phone (iPhone or Android) and access your project directly on your phone. Expo debugging also allows you to dynamically reload your code, and see the updates on your phone within seconds, which is super helpful. 
 
-In the output, you'll find options to open the app in a
+Styling for the application is done with a specific instance of Tailwind.css called Nativewind, which works hand in hand with Tailwind to provide the styling for the application. 
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+For the backend of the application, I used a site called AppWrite, which provides a cloud database for the app, along with the ability to redirect users to Google OAuth to sign into the application. Along side that, I do have a database on that's serving the data to the application dynamically.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+# Useful Websites
 
-## Get a fresh project
+* [React Native Docs](https://reactnative.dev/)
+* [Expo](https://expo.dev/)
+* [AppWrite](https://cloud.appwrite.io/)
+* [NativeWind](https://www.nativewind.dev/getting-started/installation)
+* [Google Cloud Console](console.cloud.google.com)
+* GitHub CoPilot - Claude 3.7 Sonnet Model - *Disclaimer* GitHub CoPilot was used as a peer reviewer of code and a tool for troubleshooting issues within the code. Any code suggestions provided by GitHub CoPilot were just that, suggestions. All code generated was scrutanized and confirmed as correct prior to addition to the project. The code in this project was typed by the author. 
 
-When you're ready, run:
+# Future Work
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* Expand the functionality in the profile screen to allow users to have full-access to all the links
+* Replace Demo/Dummy data with actual data
+* Provide additional sign in an authorization methods. 
